@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4ebec;
+}
+
+/*PROPIEDADES DE LA BARRA DE NAVEGACIÓN*/
+
+.menu_area { /*Incluye a todo el menu, navegador, logo y los 3 botones principales*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_area a { /*Incluye a todo el menu, da estilo a la caja*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #e4ebec ;
+    height: 50px;
+    font-family: 'Bree Serif', serif;
+    text-decoration: none;
+    transition: 0.6s;
+} 
+
+.menu_area #boton1 {
+    height: inherit;
+
+}
+.menu_area .link:hover{ /*Es para que las letras del menu cambien a color blanco*/
+    background: #57939c;
+    color: #fff;
+}
+
+.menu_area ul { /*Incluye a la clase menu_area y a las listas ul*/
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_area ul li { /*Afecta a mis 3 primeros secciones, o sea, emprendimiento,emprendedor y categorias*/
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.menu_area ul li .dropdown {
+    display: none;
+}
+.menu_area .dropdown { /*Es para que los botones que se desglozan de emprendimiento estén mas anchos*/
+    width: 225px;
+}
+.menu_area ul li:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+#botonesprincipales { /*Incluye a los 3 botones principales*/
+    width: 50%;
+}
+
+/*PROPIEDADES DE LOGO*/
+
+#logo  { /*Incluye al logo*/
+    width: 250px;
+}
+
+/*PROPIEDADES PARA COMENZAR COMO TAL EL CUERPO*/
+
+#contenedor1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.2fr 1fr 0.2fr 0.8fr;
+    gap: 20px;
+}
+
+#subcontenedor1 { /*Propiedades a la imagen de los chavos*/
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+#imagen1 { /*Da propiedades como tal a la imagen, para que quepa en el espacio de su red*/
+    justify-self: center;
+}
+
+#imagen1:hover { /*Para que la imagen de los chavos cambie de color al pasar el cursor*/
+    color: white;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+#subcontenedor2 { /*Propiedades al texto de "TIPOS DE EMPRENDEDOR"*/
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    margin-top: 10%;
+    margin-bottom: 50%;
+    border: 7px solid #57939c;
+}
+
+#subcontenedor3 { /*Propiedades al texto "Según el tamaño*/
+    grid-column: 1/2;
+    grid-row: 2/3;
+    justify-self: center;
+    margin-top: 60%;
+}
+
+#subcontenedor4 { /*Propiedades a subtitulos EMPRENDIMIENTOS PEQUEÑOS Y ESCALABLES*/
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#subcontenedor4-1 { /*Contiene a la imagen que esta justo al lado de EMPRENDIMIENTOS PEQUEÑOS Y ESCALABLES*/
+    grid-column: 2/4;
+    grid-row: 3/4;
+}
+
+#imagen3 { /*Propiedades como tal a la imagen que esta al lado de EMPRENDIMIENTOS PEQUEÑOSY ESCALABLES*/
+    width: 65%;
+    margin-left: 15%;
+    margin-top: 7%;
+}
+
+#imagen3:hover { /*Para que la imagen que esta al lado de EMPRENDIMIENTOS PEQUEÑOS Y ESCALABLES cambie con el cursor*/
+    color: white;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.subtitulo1 { /*Incluye a los subtitulos y da propiedades a los mismos*/ /*DUDAAAAAAA*/
+    font-family: 'Bree Serif', serif;
+    font-size: 17px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-transform: uppercase;
+    list-style-type: none;
+    border: 4px double #57939c;
+    padding: 15px;
+}
+
+.parrafo { /*Propiedades a los textos descriptivos de cada tipo de emprendimiento*/
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    margin-left: 7%;
+    padding: 20px;
+}
+
+#subcontenedor5 { /*Propiedades al texto "Según la innovación"*/
+    grid-column: 2/3;
+    grid-row: 4/5;
+    justify-self: center;
+}
+
+#subcontenedor5-1 { /*Propiedades a la imagen que está al lado de EMPRENDIMIENTOS ESPEJO, POR NECESIDAD...*/
+    grid-column: 1/2;
+    grid-row: 4/6;
+    justify-self: center;
+    margin-top: 10%;
+}
+
+#imagen4:hover { /*Para que la imagen que está al lado del texto SEGUN INNOVACIÓN cambie con el cursor*/
+    color: white;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+#subcontenedor6 { /*Propiedades a subtitulos EMPRENDIMIENTOS ESPEJO, NECESIDAD, así como textos descriptivos*/
+    grid-column: 2/4;
+    grid-row: 5/6;
+}
+
+.subtitulo2 { /*Proiedades a los subtitulos de SEGUN EL GRADO DE INNOVACIÓN*/
+    font-family: 'Bree Serif', serif;
+    font-size: 17px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    margin-left: 5%;
+    margin-right: 40%;  
+    text-transform: uppercase;
+    list-style-type: none;
+    border: 4px double #57939c;
+    padding: 15px;
+}
+
+.parrafo1 { /*Propiedades a los textos descriptivos de "SEGUN EL GRADO DE INNOVACIÓN*/     
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    margin-right: 15%;
+    padding: 20px;
+}
+
+#subcontenedor7 { /*Propiedades al texto "Según grado de desarrollo"*/
+    grid-column: 1/2;
+    grid-row: 6/7;
+    justify-self: center;
+}
+
+#subcontenedor8 { /*Propiedades para acomodar en la red a los EMPRENDIMIENTOS SOCIALES Y DIGITALES*/
+    grid-column: 1/2;
+    grid-row: 7/8;
+}
+
+#subcontenedor8-1 { /*Propiedades para acomodar en la red a la última imagen que está al lado de segun el ámbito...*/
+    grid-column: 2/4;
+    grid-row: 6/8;
+    margin-top: 5%;
+    justify-self: center;
+}
+
+#imagen5:hover { /*Para que la ultima imagen cambie de color al pasar el cursor*/
+    color: white;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+/*PROPIEDADES PARA EL FOOTER*/
+
+#footer1 { /*Incluye a toda la caja del footer*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.8fr 0.6fr 0.7fr repeat(2, 0.6fr);
+    background-color: #57939c;
+    margin-top: 3%;
+}
+
+#subfooter1 { /*Incluye al logo final, solo lo acomoda en la celda que quiero*/
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#subfooter1 img { /*Da propiedades tal cual a la imagen del logo*/
+    width: 150px;
+}
+
+#subfooter2 { /*Propiedades a mi caja que dice Página de referencia y artículo de referencia*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 2/5;
+    grid-row: 3/4; 
+}
+
+#lista1 { /*Da propiedades tal cual a los links de Página de referencia y artículo de referencia*/
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#lista1 li a { /*Es para que los links de Página de referencia y artículo de referencia se vean de color negro*/
+    text-decoration: none;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+}
+
+#subfooter3 { /*Propiedades al texto que dice "Página informativa de carácter...*/
+    grid-column: 2/5;
+    grid-row: 4/5;
+    text-align: center;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+    padding: 25px;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+
+#subfooter4 { /*Propiedades a mi nombre y a lo de "Escuela de Código...*/
+    grid-column: 2/5;
+    grid-row: 5/6;
+    text-align: center;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#subfooter5 { /*Es para crear una cajita a las redes sociales*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
+
+#subfooter5 img { /*Da propiedades tal cual a las imágenes de las redes sociales*/
+    width: 50px;
+    padding: 5px;
+}
