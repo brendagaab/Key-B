@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rochester&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e4ebec;
+}
+
+/*PROPIEDADES DE LA BARRA DE NAVEGACIÓN*/
+
+.menu_area { /*Incluye a todo el menu, navegador, logo y los 3 botones principales*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu_area a { /*Incluye a todo el menu, da estilo a la caja*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: #e4ebec ;
+    height: 50px;
+    font-family: 'Bree Serif', serif;
+    text-decoration: none;
+    transition: 0.6s;
+} 
+
+.menu_area #boton1 {
+    height: inherit;
+
+}
+.menu_area .link:hover{ /*Es para que las letras del menu cambien a color blanco*/
+    background: #57939c;
+    color: #fff;
+}
+
+.menu_area ul { /*Incluye a la clase menu_area y a las listas ul*/
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu_area ul li { /*Afecta a mis 3 primeros secciones, o sea, emprendimiento,emprendedor y categorias*/
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.menu_area ul li .dropdown {
+    display: none;
+}
+.menu_area .dropdown { /*Es para que los botones que se desglozan de emprendimiento estén mas anchos*/
+    width: 225px;
+}
+.menu_area ul li:hover .dropdown{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+#botonesprincipales { /*Incluye a los 3 botones principales*/
+    width: 50%;
+}
+
+/*PROPIEDADES DE LOGO*/
+
+#logo  { /*Incluye al logo*/
+    width: 250px;
+}
+
+/*PROPIEDADES PARA LAS CUATRO IMAGENES PRINCIPALES*/
+
+#contenedor1 { /*Incluye a todas mis imágenes y el texto que está al centro*/
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 1fr ;
+    grid-template-rows: minmax(1fr, auto); 
+    gap: 10px;
+    margin-top: 8%;
+}
+
+#subcontenedor1 { /*Incluye sólo a la imagen de la chica pensando*/
+    grid-column: 3/4;
+    grid-row: 2/4;
+    gap: 10px;
+    justify-self: center;
+    margin-top: 8%;
+}
+
+#subcontenedor1 img { /*Propiedades de tamaño a la imagen*/
+    width: 350px;
+}
+
+#subcontenedor1:hover { /*Es para que la imagen cambie de color cuando pasamos el mouse*/
+    color: white;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+#subcontenedor2 { /*Incluye a la imagen que dice "Emprendimiento, acomoda a este elemento en la cajita 2 a 3"*/
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding: 5px;
+}
+
+#subcontenedor3 { /*Incluye al texto que dice "Hablar de emprendimiento significa..."*/
+    grid-column: 2/3;
+    grid-row: 3/4;
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    padding: 15px;
+} 
+
+/*PROPIEDADES A LA SIGUIENTE SECCIÓN DE LA PÁGINA WEB*/
+
+#contenedor2 { /*Acomoda a mis elementos, en este caso, la información y la imagen*/
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #a4bcac;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+#cont1 { /*Propiedades a la información de "Quien emprende puede..."*/
+    grid-column: 2/3;
+    grid-row: 1/3;
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+}
+
+#cont2 { /*Propiedades para acomodar la imagen*/
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+}
+
+#cont2 img { /*Da propiedades como tal a la imagen*/
+    width: 70%;
+    border-radius: 2%;
+    margin-left: 15%;
+}
+
+#cont2:hover {
+    color: white;
+    opacity: 0.8;
+    transition: 0.8s;
+}
+/*COMIENZAN PROPIEDADES PARA EL CONTENEDOR 3*/
+
+#contenedor3 { /*Engloba a todo mi contenedor*/
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    border: 2px solid #57939c;
+    padding: 20px;
+    text-align: center;
+    margin: 40px;
+}
+
+/*COMIENZAN PROPIEDADES PARA EL CONTENEDOR 4*/
+
+#contenedor4 { /*Propiedades al contenedor*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px;
+    margin: 5%;
+    background-color: #74849c;
+    padding: 20px;
+}
+
+#subcont1 { /*Posiciona al video*/
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+#subcont2 { /*Posiciona al texto de "Idea de negocio" y el texto descriptivo*/
+    grid-column: 2/3;
+    grid-row: 1/2;
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    color: rgb(31, 30, 30);
+    text-align: justify;
+    margin-right: 5%;
+}
+
+#texto { /*Propiedades para que el texto de "Idea de negocio" solo para que se centre*/
+    margin-left: 20%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+/*PROPIEDADES PARA GRID, CONCEPTOS*/
+
+.container { /*Incluye a mi contenedor de todo mi grid*/
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+    grid-template-rows: 0.2fr 1fr 1fr;
+    gap: 30px;
+    margin: 3% 4% 4% 3%;
+    padding: 10px;
+}
+
+.box { /*Acomoda en la red a mi caja número 1*/
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: #a4bcac;
+    height: 100%;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.box:hover { /*Para que las cajas cambien de color cuando toquemos con el mouse*/
+    background-color: #b6b9bd;
+    transition: 1s;
+}
+
+.box2 { /*Acomoda en la red a mi caja número 2*/
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #a4bcac;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    text-align: justify;
+}
+
+.box2:hover { /*En específico par que la caja 2 cambie de color al tocar con el mouse*/
+    background-color: #b6b9bd;
+    transition: 1s;
+}
+
+.box3 { /*Acomoda en la red a mi caja número 3*/
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.box4 { /*Acomoda a mi caja nñumero 4*/
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#desarrollo_ideasnegocio { /*Es el texto que dice "Desarrollo de ideas de negocio..."*/
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    border: 4px solid #a4bcac;
+}
+
+.textogrid { /*Da propiedades a los textos descriptivos de cada caja*/
+    padding: 20px;
+}
+
+.numeros { /*Da propiedades a los números de las cajitas*/
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 { /*Cambian los subtitulos de cada caja*/
+    font-family: 'Rochester', cursive;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.733);
+}
+
+/*PROPIEDADES PARA EL FOOTER*/
+
+#footer1 { /*Incluye a toda la caja del footer*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.3fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.8fr 0.6fr 0.7fr repeat(2, 0.6fr);
+    background-color: #57939c;
+    margin-top: 3%;
+}
+
+#subfooter1 { /*Incluye al logo final, solo lo acomoda en la celda que quiero*/
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+#subfooter1 img { /*Da propiedades tal cual a la imagen del logo*/
+    width: 150px;
+}
+
+#subfooter2 { /*Propiedades a mi caja que dice Página de referencia y artículo de referencia*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    grid-column: 2/5;
+    grid-row: 3/4; 
+}
+
+#lista1 { /*Da propiedades tal cual a los links de Página de referencia y artículo de referencia*/
+    grid-column: 2/5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+#lista1 li a { /*Es para que los links de Página de referencia y artículo de referencia se vean de color negro*/
+    text-decoration: none;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+}
+
+#subfooter3 { /*Propiedades al texto que dice "Página informativa de carácter...*/
+    grid-column: 2/5;
+    grid-row: 4/5;
+    text-align: center;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+    padding: 25px;
+    border-bottom: 1px solid rgb(31, 30, 30);
+}
+
+#subfooter4 { /*Propiedades a mi nombre y a lo de "Escuela de Código...*/
+    grid-column: 2/5;
+    grid-row: 5/6;
+    text-align: center;
+    color: rgb(31, 30, 30);
+    font-family: 'Bree Serif', serif;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#subfooter5 { /*Es para crear una cajita a las redes sociales*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    grid-column: 3/4;
+    grid-row: 6/7;
+}
+
+#subfooter5 img { /*Da propiedades tal cual a las imágenes de las redes sociales*/
+    width: 50px;
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
+
